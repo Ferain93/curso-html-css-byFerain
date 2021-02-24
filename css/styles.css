@@ -36,7 +36,8 @@
 
 body {
     color: var(--colorgray30);
-    font-family: charter;
+    font-family: 'Roboto', sans-serif;
+    /*font-family: charter; Forma de llamar a la fuente con font-face*/
     /*font-family: Arial; Forma de llamar una fuente que si esta en todos los sistemas*/   
 }
 
@@ -74,4 +75,9 @@ h2 {
 
 h1 {
     font-size: 1.5em;
+}
+
+pre {
+   background: orange; 
+   width: 80vw;
 }
