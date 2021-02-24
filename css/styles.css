@@ -1,0 +1,77 @@
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 16px;
+    background: #ffffff;
+    --colorgray30: #212121;
+    --colorgray20: #212429;
+    --colorgray10: #616161;
+}
+
+body {
+    color: var(--colorgray30);
+    font-family: charter;
+    /*font-family: Arial; Forma de llamar una fuente que si esta en todos los sistemas*/   
+}
+
+a {
+    color: var(--colorgray30); 
+}
+
+header {
+    background: rgba(82, 148, 160, 0.692);
+    width: 80vw;
+    font-size: 14px;
+}
+
+header a {
+    --colorgray10: #202040;
+    color:var(--colorgray10);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--colorgray30);
+}
+
+nav details summary{
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
