@@ -1,0 +1,128 @@
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: charter;
+    src: url('../fonts/fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 16px;
+    background: #ffffff;    
+    --colorgray30: #212121;
+    --colorgray20: #212429;
+    --colorgray15: #424242;
+    --colorgray10: #616161;
+}
+
+body {
+    color: var(--colorgray30);
+    font-family: 'Roboto', sans-serif;
+    /*font-family: charter; Forma de llamar a la fuente con font-face*/
+    /*font-family: Arial; Forma de llamar una fuente que si esta en todos los sistemas*/   
+    margin: 0;
+}
+
+a {
+    color: var(--colorgray30); 
+}
+
+header {
+    background: rgba(82, 148, 160, 0.692);
+    width: 80vw;
+    font-size: 14px;
+}
+
+header a {
+    --colorgray10: #202040;
+    color:var(--colorgray10);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--colorgray30);
+}
+
+nav details summary{
+    font-weight: bold;
+}
+
+h1+p {
+    /*margin-bottom: 64px;*/
+}
+
+hr {
+    margin: 64px;
+}
+h1 {
+    font-size: 60px;
+    /*margin: top right bottom left;*/
+    margin: 64px 54px 16px 0px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 40px 0px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 16px 0 24px;
+}
+
+pre {
+   background: #FEC62E; 
+   width: 80vw;
+}
+
+.hero {
+    background-image: linear-gradient(to top, rgba(255,255,255, 0.35), transparent), url('../images/patron-1.png');
+    /*background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;*/
+    height: 350px;
+}
+
+.section-content {
+    counter-reset: titleList;
+}
+
+.section-content h3{
+    counter-increment: titleList;
+}
+
+.section-content h3::before{
+    content: counter(titleList)".";
+}
+
+.section-content h3::after{
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: var(--colorgray15);
+    display: block;
+}
+
+::selection{
+    background: #FEC62E;
+}
