@@ -35,6 +35,10 @@
     --colorgray10: #616161;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--colorgray30);
     font-family: 'Roboto', sans-serif;
@@ -48,9 +52,15 @@ a {
 }
 
 header {
+    color: var(--colorgray10);
     background: rgba(82, 148, 160, 0.692);
-    width: 80vw;
+    /*width: 80vw;*/
+    width: 188px;
     font-size: 14px;
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    z-index: 1;
 }
 
 header a {
@@ -65,6 +75,11 @@ header a:hover{
 
 nav details summary{
     font-weight: bold;
+    line-height: 24px;
+}
+
+header li {
+    margin-bottom: 16px;
 }
 
 /*h1+p {
@@ -78,6 +93,7 @@ h1 {
     font-size: 60px;
     /*margin: top right bottom left;*/
     margin: 64px 54px 16px 0px;
+    font-weight: normal;
 }
 
 h2 {
@@ -90,6 +106,10 @@ h3 {
     font-size: 1.5em;
     margin: 16px 0 24px;
     font-weight: normal;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    padding: 10px;
 }
 
 pre {
@@ -117,6 +137,33 @@ blockquote span::before{
     content: '-';
 }
 
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    position: relative;
+}
+
+.main {
+    /*background-image: linear-gradient(to top, rgba(255,255,255, 0.35), transparent), url('../images/patron-1.png');
+    border: 1px solid orangered;
+    background: #FEC62E;*/
+    background: #ffffff;
+}
+
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+
+.main-content {
+    /*background: greenyellow;
+    padding: 20px;*/
+    background: white;
+}
+
 /*Depurar
 .debug{
     box-shadow: 0 0 0 1px orange; por fuera
@@ -125,7 +172,7 @@ blockquote span::before{
 }*/
 
 .hero {
-    background-image: linear-gradient(to top, rgba(255,255,255, 0.35), transparent), url('../images/patron-1.png');
+    background-image: linear-gradient(to top, rgba(255,255,255,0.35), transparent), url('../images/patron-1.png');
     /*background-repeat: no-repeat;
     background-position: left bottom;
     background-size: cover;*/
@@ -162,7 +209,7 @@ blockquote span::before{
 
 .section-content h3{
     counter-increment: titleList;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
 }
 
 .section-content h3::before{
@@ -174,7 +221,11 @@ blockquote span::before{
     width: 80px;
     height: 4px;
     background: var(--colorgray15);
-    display: block;
+    /*display: block;*/
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 ::selection{
