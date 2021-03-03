@@ -60,7 +60,7 @@ header {
     left: ; inset-block-start: ;
     right: ; inset-inline-end: ;*/
     inset-block-start: 0;
-    inset-inline-start: -188px;
+    inset-inline-start: -208px;
     inline-size: 188px;
 }
 
@@ -68,6 +68,10 @@ header a, li {
     --colorgray10: #202040;
     color: var(--color15);
     text-decoration: none;
+}
+
+header li {
+    margin-block-end: 16px;
 }
 
 header a:hover{
@@ -84,7 +88,7 @@ nav details summary{
 
 h1 {
     font-size: 60px;
-    text-align: left;
+    text-align: start; /*end: rigth, start: left, justify: justificado*/
     margin-block-start: 64px;
     margin-block-end: 16px;
 }
@@ -156,11 +160,20 @@ pre {
 
 .header {
     position: sticky;
-    inset-block-start: 0;
+    inset-block-start: -45px;
+    /*position: fixed;
+    inset: 50px; hace un cuadrado que se ve sobre la página*/
+    /*position: fixed;
+    inset-inline: 50px;
+    block-size: 500px; estas dos propiedades hacen un rectangulo horizontal*/
+    /*position: fixed;
+    inset-block: 50px;
+    inline-size: 500px; estas dos hacen un rectangulo vertical*/
 }
 
 .header-content {
     position: relative;
+    inset-block-start: 65px;
 }
 
 .section-content img {
@@ -204,4 +217,62 @@ pre {
 
 .main-content {
     padding-inline: 16px;    
+}
+
+.slider {
+    border: 1px solid red;
+}
+
+.slider-container {
+    /*block-size: 100px;*/
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: var(--colorwhite30);
+    border-radius: 50%;
+}
+
+.form input{
+    inline-size: 100%;
+    border: 1px solid var(--colorwhite30);
+    background: var(--color10);
+    box-sizing: border-box;  
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--colorwhite30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+    background: #157EFB;
+    border: none;
+    /*necesita aunque funcione realmente*/
+}
+
+.form ::-webkit-input-placeholder {
+    color: var(--colorwhite30);
 }
