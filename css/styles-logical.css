@@ -28,64 +28,145 @@
 
 :root {
     font-size: 16px;
-    background: #ffffff;    
-    --colorgray30: #212121;
-    --colorgray20: #212429;
-    --colorgray15: #424242;
-    --colorgray10: #616161;
+    background: var(--color10);    
+    --colorwhite30: #ffffff;
+    --colorgray20: #3A3539;
+    --color15: #A5A3A5;
+    --color10: #251F24;
+    --color5: #616161;
 }
 
 body {
-    color: var(--colorgray30);
-    font-family: 'Roboto', sans-serif;
+    color: var(--colorwhite30);
+    font-family: 'Nunito', sans-serif;
+    background: var(--color10);
     /*font-family: charter; Forma de llamar a la fuente con font-face*/
-    /*font-family: Arial; Forma de llamar una fuente que si esta en todos los sistemas*/   
+    /*font-family: Arial; Forma de llamar una fuente que si esta en todos los sistemas*/
+    margin: 0;   
 }
 
 a {
-    color: var(--colorgray30); 
+    color: var(--colorwhite30); 
 }
 
 header {
-    background: rgba(82, 148, 160, 0.692);
+    /*background: rgba(82, 148, 160, 0.692);*/
     width: 80vw;
     font-size: 14px;
+    color: var(--colorwhite30);
+    position: absolute;
+    /*top: ; inset-block-start: ;
+    bottom: ; inset-block-end: ;
+    left: ; inset-block-start: ;
+    right: ; inset-inline-end: ;*/
+    inset-block-start: 0;
+    inset-inline-start: -188px;
+    inline-size: 188px;
 }
 
-header a {
+header a, li {
     --colorgray10: #202040;
-    color:var(--colorgray10);
+    color: var(--color15);
     text-decoration: none;
 }
 
 header a:hover{
-    color: var(--colorgray30);
+    color: var(--colorwhite30);
 }
 
 nav details summary{
     font-weight: bold;
 }
 
+/*h1, h2, h3 {
+    font-weight: normal;
+}*/
+
 h1 {
     font-size: 60px;
-    text-align: right;
+    text-align: left;
+    margin-block-start: 64px;
+    margin-block-end: 16px;
 }
 
 h2 {
     font-size: 2em;
+    margin-block: 40px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-block: 16px;
+}
+
+hr {
+    margin-block: 40px;
+    border-color: var(--color5);
+}
+
+pre, blockquote {
+   background: var(--colorgray20); 
+   /*width: 80vw;*/
+}
+
+p {
+    color: var(--color15);
+}
+
+blockquote {
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    border-radius: 8px;
+    /*padding: 24px;*/
+    padding-inline-end: 24px;
+    padding-block-start: 24px;
+    padding-inline-start: 24px;
+    padding-block-end: 24px;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+blockquote p {
+    color: var(--colorwhite30);
 }
 
 pre {
-   background: #FEC62E; 
-   width: 80vw;
+    padding: 40px;
+    overflow: auto;
+    border-radius: 8px;
+    /*border-block-end: 5px solid blue;
+    border-inline-start: 20px solid green; 
+    border-radius: 50%;
+    inline-size: 400px;
+    block-size: 400px;
+    border-start-start-radius: 50px;*/
+    border: 10px solid #5551FF;
+    box-shadow: -10px 10px 0 0 #ABAAF6;
 }
 
 .hero {
-    background-image: linear-gradient(to top, rgba(255,255,255, 0.35), transparent), url('../images/patron-1.png');
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    /*background-image: linear-gradient(to top, rgba(255,255,255, 0.35), transparent), url('../images/patron-1.png');*/
     /*background-repeat: no-repeat;
     background-position: left bottom;
     background-size: cover;*/
     height: 350px;
+}
+
+.header {
+    position: sticky;
+    inset-block-start: 0;
+}
+
+.header-content {
+    position: relative;
+}
+
+.section-content img {
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
 }
 
 .section-content {
@@ -100,14 +181,27 @@ pre {
     content: counter(titleList)".";
 }
 
-.section-content h3::after{
+/*.section-content h3::after{
     content: '';
     width: 80px;
     height: 4px;
     background: var(--colorgray15);
     display: block;
-}
+}*/
 
 ::selection{
-    background: #FEC62E;
+    background: moccasin;
+}
+
+.main hr{
+    display: none;
+}
+
+.wrapper {
+    max-inline-size: 902px;
+    margin: auto;
+}
+
+.main-content {
+    padding-inline: 16px;    
 }
