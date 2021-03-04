@@ -54,7 +54,7 @@ header {
     /*width: 80vw;*/
     font-size: 14px;
     color: var(--colorwhite30);
-    position: absolute;
+    /*position: absolute;*/
     margin-block-start: 20px;
     /*top: ; inset-block-start: ;
     bottom: ; inset-block-end: ;
